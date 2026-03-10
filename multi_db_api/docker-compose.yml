@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: kemal
+      POSTGRES_PASSWORD: kemal123
+      POSTGRES_DB: multidb_demo
+    ports:
+      - "5433:5432"
+
+  redis:
+    image: redis:7
+    ports:
+      - "6380:6379"
+
+  mongo:
+    image: mongo:7
+    ports:
+      - "27018:27017"
+
+  api:
+    build: .
+    ports:
+      - "8001:8000"
+    env_file: .env
+    depends_on:
+      - postgres
+      - redis
+      - mongo
