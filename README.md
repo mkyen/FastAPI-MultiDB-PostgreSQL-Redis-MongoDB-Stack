@@ -1,4 +1,4 @@
-##FastAPI-MultiDB-PostgreSQL-Redis-MongoDB-Stack
+FastAPI-MultiDB-PostgreSQL-Redis-MongoDB-Stack
 
 A multi-database backend API built with FastAPI, demonstrating how PostgreSQL, Redis, and MongoDB can work together in a single application. Each database is used for what it does best: PostgreSQL handles persistent relational data, Redis manages sessions and caching, MongoDB stores request logs and powers full-text search.
 
